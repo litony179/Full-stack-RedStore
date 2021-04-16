@@ -1,0 +1,36 @@
+/* 
+======================================
+GLOBAL STYLES 
+======================================
+*/
+
+:root {
+    --color-text-grey: #555;
+    --color-button-primary: #ff523b;
+    --color-button-primary-light: #563434;
+    --color-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    color: var(--color-text-grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+#root {
+    height: 100%;
+}
