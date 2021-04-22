@@ -1,0 +1,96 @@
+/* 
+======================================
+homePage-card (PRODUCT) STYLES
+======================================
+ */
+
+.row {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 3rem;
+}
+
+.homePage-card {
+    flex-basis: 23%;
+    margin: 0.3rem;
+    box-shadow: 5px 5px 20px rgba(92, 92, 92, 0.1);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+}
+
+.row.center {
+    justify-content: center;
+}
+
+.homePage-card img {
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.homePage-card-body {
+    padding: 1rem;
+}
+
+.homePage-card-body>* {
+    margin-bottom: 0.5rem;
+}
+
+.homePage-card-body h4 {
+    display: flex;
+    font-size: 1.2rem;
+    height: 5rem;
+    align-items: center;
+}
+
+.homePage-card-body a {
+    text-decoration: none;
+    color: #000;
+}
+
+.price {
+    font-size: 1rem;
+}
+
+
+/* 
+======================================
+homePage-card HOVER STYLES
+======================================
+ */
+
+.homePage-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* 
+======================================
+homePage-card RESPONSIVE STYLES
+======================================
+ */
+
+@media screen and (max-width: 860px) {
+    .homePage-card {
+        flex-basis: 44%;
+    }
+    .homePage-card-body h4 {
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .homePage-card {
+        display: block;
+        flex-basis: 100%;
+    }
+    .homePage-card-body h4 {
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

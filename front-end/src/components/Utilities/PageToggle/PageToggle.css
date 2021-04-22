@@ -1,0 +1,22 @@
+.page-btn {
+    margin: 3rem 4.5rem;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn span:hover {
+    background-color: #563434;
+    color: #fff;
+    border: 1px solid #333;
+}

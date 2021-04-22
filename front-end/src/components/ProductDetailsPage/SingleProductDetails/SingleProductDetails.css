@@ -1,0 +1,137 @@
+.singleProductDetails-container {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.row {
+    align-items: center;
+}
+
+.singleProductDetails-container .col-2 img {
+    padding: 0;
+    border-radius: 5px;
+}
+
+.singleProductDetails-container .col-2 {
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.singleProductDetails-container h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    line-height: 3.5rem;
+    ;
+}
+
+.singleProductDetails-container h3 {
+    margin-bottom: 1rem;
+}
+
+.singleProductDetails-container h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
+}
+
+
+/* 
+============================================
+SELECT SIZE STYLES
+============================================
+*/
+
+.singleProductDetails-container select {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #333;
+    border: 1px solid #ff523b;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    transition: border 0.2s;
+}
+
+.singleProductDetails-container select:focus {
+    outline: none;
+}
+
+
+/* 
+============================================
+INPUT STYLES
+============================================
+*/
+
+.singleProductDetails-container input {
+    display: inline;
+    width: 3rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 2rem 0 0;
+    border: 1px solid #ff523b;
+    border-radius: 5px;
+}
+
+
+/* 
+============================================
+BUTTON STYLES
+============================================
+*/
+
+.singleProductDetails-btn {
+    padding: 0.3rem 2rem;
+}
+
+
+/* 
+============================================
+ICON STYLES
+============================================
+*/
+
+.fa-indent {
+    margin-left: 1rem;
+    color: #ff523b;
+}
+
+
+/* 
+============================================
+PRODUCT DESCRIPTION IMAGES STYLES
+============================================
+*/
+
+.small-PD-img-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-PD-img-row img {
+    max-height: 6.2rem;
+}
+
+.small-PD-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.ratings {
+    margin: 2rem 0;
+}
+
+.success {
+    color: #81b214;
+    font-weight: 600;
+}
+
+.error {
+    color: #f05945;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+    .singleProductDetails-container select {
+        margin: auto;
+    }
+}

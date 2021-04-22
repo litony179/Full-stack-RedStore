@@ -1,0 +1,11 @@
+.productFilter-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 12rem;
+}
+
+.productFilter-container select {
+    border: 1px solid #ff523b;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
+}

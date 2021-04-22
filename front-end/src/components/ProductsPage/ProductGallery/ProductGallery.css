@@ -1,0 +1,6 @@
+.product-gallery-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4rem;
+    flex-wrap: wrap;
+}

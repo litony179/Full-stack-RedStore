@@ -1,0 +1,35 @@
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 5rem;
+    padding: 1.8rem
+}
+
+.col-2 .offer-img {
+    padding: 3rem 3rem 0 0;
+}
+
+.col-2 small {
+    display: block;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.offer-btn {
+    display: inline-block;
+}
+
+
+/* 
+==========================
+RESPONSIVE STYLES 
+==========================
+*/
+
+@media only screen and (max-width: 770px) {
+    col-2 {
+        flex-basis: 100%;
+    }
+    .col-2 p {
+        padding: 3rem;
+    }
+}
