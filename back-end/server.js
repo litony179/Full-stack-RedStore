@@ -1,7 +1,7 @@
 const express = require('express');
 const recentData = require('./data/data.js');
 
-const featuredDataRoute = require('./routes/dataRoutes');
+const dataRoute = require('./routes/dataRoutes');
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.get('/', (req, res, next) => {
 });
 
 // This is to fetch the data in the HomePage
-app.use(featuredDataRoute);
+app.use(dataRoute);
 
 // This is to extract the port that your hosting service provides for you
 const port = process.env.PORT || 5000;
