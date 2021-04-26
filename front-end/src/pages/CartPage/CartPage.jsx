@@ -15,8 +15,6 @@ function CartPage(props) {
       dispatch(addToCart(productId, qty));
     }
   }, [dispatch, productId, qty]);
-
-  console.log(qty);
   return (
     <div>
       <h1>Cart Screen</h1>
