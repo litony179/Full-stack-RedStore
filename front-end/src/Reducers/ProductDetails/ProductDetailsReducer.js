@@ -19,16 +19,3 @@ export const featuredProductDetailsReducer = (state = { product: {}, loader: tru
             return state;
     }
 }
-
-export const recentProductDetailsReducer = (state = { recentProduct: {}, recentLoader: true }, action) => {
-    switch (action.type) {
-        case RECENT_PRODUCT_DETAILS_REQUEST:
-            return { recentLoader: true };
-        case RECENT_PRODUCT_DETAILS_SUCCESS:
-            return { recentLoader: false, recentProduct: action.payload };
-        case RECENT_PRODUCT_DETAILS_FAIL:
-            return { recentLoader: false, recentError: action.payload }
-        default:
-            return state;
-    }
-}

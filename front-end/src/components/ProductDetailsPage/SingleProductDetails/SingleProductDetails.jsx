@@ -1,15 +1,24 @@
 import React, { useState } from "react";
+import { withRouter } from 'react-router'
 import Ratings from "../../Utilities/Ratings/Ratings";
 import "./SingleProductDetails.css";
 
 function SingleProductDetails(props) {
   const { details } = props;
+  const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
   const PDImage1 = details.imagePD1;
   const PDImage2 = details.imagePD2;
   const PDImage3 = details.imagePD4;
   const PDImage4 = details.imagePD3;
   const PD = { PDImage1, PDImage2, PDImage3, PDImage4 };
   const [isPDImageShown, setPDImageShown] = useState(PD.PDImage1);
+
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${details._id}?qty=${qty}`);
+    console.log(qty);
+  }
+
 
   return (
     <div className="singleProductDetails-container">
@@ -80,10 +89,26 @@ function SingleProductDetails(props) {
             <option>Medium</option>
             <option>Small</option>
           </select>
-          <input type="number" min="1" max="9999" defaultValue="1" />
-          <a href="" className="btn singleProductDetails-btn">
-            Add To Cart
-          </a>
+          {
+            details.inventory > 0 && (
+              <>
+                <div className="cart-row">
+                  <p>Qty</p>
+                  <div>
+                    <select value={qty} onChange={e => setQty(e.target.value)}>
+                      
+                      {
+                        [...Array(details.inventory).keys()].map( x => (
+                          <option key={x + 1} value={x + 1}>{x + 1}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+                </div>
+                <a onClick={addToCartHandler} href="" className="btn singleProductDetails-btn">Add To Cart</a>
+              </>
+            )
+          }
           <h3>
             Product Details <i class="fas fa-indent"></i>
           </h3>
@@ -94,4 +119,4 @@ function SingleProductDetails(props) {
   );
 }
 
-export default SingleProductDetails;
+export default withRouter(SingleProductDetails);

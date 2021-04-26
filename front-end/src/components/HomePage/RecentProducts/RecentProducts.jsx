@@ -18,7 +18,7 @@ function RecentProducts() {
 
   return (
     <div className="recentProducts-container">
-      <h2 className="recentProducts-title">Recent Products</h2>
+      <h2 className="recentProducts-title">Recent Most Popular Products</h2>
       <div className="row center">
         {loader ? (
           <LoadingBox></LoadingBox>

@@ -22,17 +22,3 @@ export const detailsFeatureProduct = (productId) => async(dispatch) => {
         dispatch({ type: PRODUCT_DETAILS_FAIL, payload: err.response && err.response.data.message ? err.response.data.message : err.message });
     }
 }
-
-export const detailsRecentProduct = (recentProductId) => async(dispatch) => {
-    dispatch({
-        type: RECENT_PRODUCT_DETAILS_REQUEST,
-        payload: recentProductId
-    });
-
-    try {
-        const { data } = await Axios.get(`api/recentProducts/${recentProductId}`);
-        dispatch({ type: RECENT_PRODUCT_DETAILS_SUCCESS, payload: data });
-    } catch (err) {
-        dispatch({ type: RECENT_PRODUCT_DETAILS_FAIL, payload: err.response && err.response.data.message ? err.response.data.message : err.message });
-    }
-}
