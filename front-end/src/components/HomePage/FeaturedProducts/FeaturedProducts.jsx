@@ -26,7 +26,7 @@ function FeaturedProducts() {
         <MessageBox varient="danger">{error}</MessageBox>
       ) : (
         <div className="row center">
-          {products.map((product) => (
+          {products.slice(0,4).map((product) => (
             <Product key={product._id} product={product}></Product>
           ))}
         </div>

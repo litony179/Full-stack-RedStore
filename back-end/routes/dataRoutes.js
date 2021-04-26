@@ -5,16 +5,6 @@ const recentData = require('../data/recentData')
 
 const router = express.Router();
 
-router.get('/api/recentProducts/:id', (req, res, next) => {
-    const product = recentData.RecentProducts.find(x => x._id === req.params.id);
-    if (product) {
-        res.send(product);
-    } else {
-        res.status(404).send({ message: 'Product not found' });
-    }
-    next();
-});
-
 router.get('/api/products/:id', (req, res, next) => {
     const product = data.products.find(x => x._id === req.params.id);
     if (product) {
@@ -32,7 +22,6 @@ router.get('/api/products', (req, res, next) => {
 
 router.get('/api/recentProducts', (req, res, next) => {
     res.send(recentData.RecentProducts);
-
 });
 
 
