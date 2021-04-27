@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router";
+import { withRouter} from "react-router";
+import {Link} from 'react-router-dom';
 import Ratings from "../../Utilities/Ratings/Ratings";
 import "./SingleProductDetails.css";
 
@@ -89,7 +90,7 @@ function SingleProductDetails(props) {
           </select>
           {details.inventory > 0 && (
             <>
-              <div className="cart-row">
+              <div className="details-row">
                 <p>Qty</p>
                 <div>
                   <select value={qty} onChange={(e) => setQty(e.target.value)}>
@@ -101,13 +102,13 @@ function SingleProductDetails(props) {
                   </select>
                 </div>
               </div>
-              <a
+              <button
                 onClick={addToCartHandler}
                 href=""
                 className="btn singleProductDetails-btn"
               >
                 Add To Cart
-              </a>
+              </button>
             </>
           )}
           <h3>

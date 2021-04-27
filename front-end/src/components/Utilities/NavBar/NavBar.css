@@ -63,8 +63,34 @@ SIGNUP/SIGNIN BUTTON STYLES
 */
 
 .signup-btn {
-    padding: 0.2rem 0.8rem;
+    padding: 0.2rem 0.8rem !important;
     color: #fff !important;
+}
+
+
+/* 
+======================================
+BADGE STYLES 
+======================================
+*/
+
+.shopping-cart {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    background-color: #f02020;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+}
+
+.fa-shopping-cart {
+    font-size: 1.2rem;
 }
 
 
