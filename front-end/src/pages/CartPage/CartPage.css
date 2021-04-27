@@ -1,0 +1,111 @@
+.cart-page-nav {
+    padding: 0.4rem 7rem;
+}
+
+.cart-footer {
+    margin: 0 !important;
+}
+
+.cart-row {
+    margin: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20rem;
+    padding: 0.5rem 1rem;
+}
+
+
+/* 
+=====================================
+CART CATEGORIES STYLES
+=====================================
+*/
+
+.cart-categories {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff523b;
+    margin: 3rem 20rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+.cart-details {
+    width: 30rem;
+    padding-left: 3.5rem;
+}
+
+
+/* 
+=====================================
+CART ITEM STYLES
+=====================================
+*/
+
+.items-container h1 {
+    margin-left: 8rem;
+}
+
+.cart-item-subtotal {
+    text-align: right;
+    width: 5rem;
+}
+
+.cart-img-small {
+    max-width: 5rem;
+    width: 100%;
+}
+
+.cart-product-name {
+    width: 30rem;
+    padding-left: 2rem;
+}
+
+.cart-product-remove-button {
+    border: 1px solid #ff523b;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart-product-remove-button:hover {
+    background-color: #ff523b;
+    color: #fff;
+}
+
+
+/* 
+=====================================
+CART ACTION STYLES
+=====================================
+*/
+
+.cart-action {
+    display: block;
+    position: relative;
+}
+
+.cart-action-card {
+    width: 20rem;
+    margin: 2rem calc(100vw - 40%);
+    padding: 1rem;
+    border: 1px solid #ff523b;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.cart-action-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.cart-action-btn {
+    margin: 0 !important;
+    border: none !important;
+}

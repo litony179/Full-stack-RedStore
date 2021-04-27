@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Categories.css';
 
 
@@ -23,8 +24,8 @@ function Categories() {
                                         <img onMouseEnter={() => setCategoryClothesShown(true)} onMouseLeave={() => setCategoryClothesShown(false)} src="images/category-1.jpg" alt="category-pic"></img>
                                         {isCategoryClothesShown && (
                                             <div onMouseEnter={() => setCategoryClothesShown(true)} className="button-container"> 
-                                                <a className="btn category-btn" href="">shop men</a>
-                                                <a className="btn category-btn" href="">shop women</a>
+                                                <Link className="btn category-btn" to="/products">shop men</Link>
+                                                <Link className="btn category-btn" to="/products">shop women</Link>
                                             </div>
                                         )}
                                     </div>
@@ -40,8 +41,8 @@ function Categories() {
                                         <img onMouseEnter={() => setCategoryShoesShown(true)} onMouseLeave={() => setCategoryShoesShown(false)} src="images/category-2.jpg" alt="category-pic"></img>
                                         {isCategoryShoesShown && (
                                             <div onMouseEnter={() => setCategoryShoesShown(true)} className="button-container"> 
-                                                <a className="btn category-btn" href="">shop men</a>
-                                                <a className="btn category-btn" href="">shop women</a>
+                                                <Link className="btn category-btn" to="/products">shop men</Link>
+                                                <Link className="btn category-btn" to="/products">shop women</Link>
                                             </div>
                                         )}
                                     </div>
@@ -58,8 +59,8 @@ function Categories() {
                                         <img onMouseEnter={() => setCategoryAccessoriesShown(true)} onMouseLeave={() => setCategoryAccessoriesShown(false)} src="images/category-3.jpg" alt="category-pic"></img>
                                         {isCategoryAccessoriesShown && (
                                             <div onMouseEnter={() => setCategoryAccessoriesShown(true)} className="button-container"> 
-                                                <a className="btn category-btn" href="">shop men</a>
-                                                <a className="btn category-btn" href="">shop women</a>
+                                                <Link className="btn category-btn" to="/products">shop men</Link>
+                                                <Link className="btn category-btn" to="/products">shop women</Link>
                                             </div>
                                         )}
                                     </div>
