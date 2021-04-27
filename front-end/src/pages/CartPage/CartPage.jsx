@@ -42,8 +42,8 @@ function CartPage(props) {
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
         <MessageBox>
-          Cart is Empty. 
-          <Link to="/">Go shippong</Link>
+          Cart is Empty.  
+          <Link to="/"> Go shopping</Link>
         </MessageBox>) : (
           <ul>
             <div className="cart-categories">
