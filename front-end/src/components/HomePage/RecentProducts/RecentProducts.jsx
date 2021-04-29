@@ -25,7 +25,7 @@ function RecentProducts() {
         ) : error ? (
           <MessageBox>{error}</MessageBox>
         ) : (
-          recentProducts.map((recentProduct) => (
+          recentProducts.slice(4,12).map((recentProduct) => (
             <Product key={recentProduct._id} product={recentProduct}></Product>
           ))
         )}
