@@ -1,6 +1,19 @@
+const bcrypt = require('bcryptjs');
 const data = {
+    users: [{
+            name: "Tony",
+            email: "tonyli@test.com",
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name: "Whitney",
+            email: "whitney@test.com",
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+        }
+    ],
     products: [{
-            _id: 'FP1',
             name: 'Red Printed T-Shirt',
             category: 'Shirts',
             image: '/images/product-1.jpg',
@@ -17,7 +30,7 @@ const data = {
             details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
         },
         {
-            _id: 'FP2',
+
             name: 'Red Classic Runners',
             category: 'Shoes',
             image: '/images/product-2.jpg',
@@ -31,9 +44,11 @@ const data = {
             rating: 5,
             numReviews: 17,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'FP3',
+
             name: 'Red Sweat Pants',
             category: 'Pants',
             image: '/images/product-3.jpg',
@@ -47,9 +62,11 @@ const data = {
             rating: 3.5,
             numReviews: 8,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'FP4',
+
             name: 'Blue Printed T-Shirt',
             category: 'Shirts',
             image: '/images/product-4.jpg',
@@ -63,10 +80,12 @@ const data = {
             rating: 5,
             numReviews: 34,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RP1',
-            name: 'Red Printed T-Shirt',
+
+            name: 'Red Printed T-Shirt small',
             category: 'Shirts',
             image: '/images/product-5.jpg',
             imagePD1: '/images/product-5.jpg',
@@ -79,10 +98,12 @@ const data = {
             rating: 3,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RP2',
-            name: 'Red Printed T-Shirt',
+
+            name: 'Red Printed T-Shirt medium',
             category: 'Shirts',
             image: '/images/product-6.jpg',
             imagePD1: '/images/product-6.jpg',
@@ -95,10 +116,12 @@ const data = {
             rating: 3.5,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RP3',
-            name: 'Red Printed T-Shirt',
+
+            name: 'Red Printed T-Shirt large',
             category: 'Shirts',
             image: '/images/product-7.jpg',
             imagePD1: '/images/product-7.jpg',
@@ -111,10 +134,12 @@ const data = {
             rating: 5,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RP4',
-            name: 'Red Printed T-Shirt',
+
+            name: 'Red Printed T-Shirt extra large',
             category: 'Shirts',
             image: '/images/product-8.jpg',
             imagePD1: '/images/product-8.jpg',
@@ -127,9 +152,10 @@ const data = {
             rating: 1,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RMP1',
             name: 'Red Sports Watch',
             category: 'Shirts',
             image: '/images/product-9.jpg',
@@ -143,9 +169,11 @@ const data = {
             rating: 3,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RMP2',
+
             name: 'Nike Running Shoes',
             category: 'Shirts',
             image: '/images/product-10.jpg',
@@ -159,9 +187,10 @@ const data = {
             rating: 3.5,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RMP3',
             name: 'Red Store Casual Shoes',
             category: 'Shirts',
             image: '/images/product-11.jpg',
@@ -175,9 +204,10 @@ const data = {
             rating: 5,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         },
         {
-            _id: 'RMP4',
             name: 'Black Trackpants',
             category: 'Shirts',
             image: '/images/product-12.jpg',
@@ -191,6 +221,8 @@ const data = {
             rating: 1,
             numReviews: 10,
             description: 'High Quality Product',
+            details: "Give your summer wardrobe a style upgrade with the HRX Men's Active T-shirt. Couple it with a pair of active shorts for your morining workout or denims for an evening out with the guys."
+
         }
     ],
 

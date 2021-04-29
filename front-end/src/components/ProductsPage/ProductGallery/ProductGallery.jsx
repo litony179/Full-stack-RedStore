@@ -13,7 +13,7 @@ const productGallery = () => {
                     <Product key={product._id} product={product}></Product>
                 ))
             }
-            {
+            {/* {
                 RecentProductsData.RecentProducts.map((product) => (
                     <Product key={product._id} product={product}></Product>
                 ))
@@ -22,7 +22,7 @@ const productGallery = () => {
                 RecommendedProductData.recommendedProducts.map((product) => (
                     <Product key={product._id} product={product}></Product>
                 ))
-            }
+            } */}
         </div>
     );
 }

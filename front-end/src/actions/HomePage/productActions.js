@@ -27,7 +27,7 @@ export const recentListProducts = () => async(dispatch) => {
     });
 
     try {
-        const { data } = await Axios.get('/api/recentProducts');
+        const { data } = await Axios.get('/api/products');
         dispatch({ type: RECENT_PRODUCT_LIST_SUCCESS, payload: data });
     } catch (err) {
         dispatch({ type: RECENT_PRODUCT_LIST_FAIL, payload: err.message });
