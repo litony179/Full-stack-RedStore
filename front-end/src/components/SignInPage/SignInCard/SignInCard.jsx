@@ -4,10 +4,9 @@ import LogInForm from "../LogInForm/LogInForm";
 import { motion } from "framer-motion";
 
 const backdropVarients = {
-  animate={{ scale: 0.5 }} 
-     transition={{ duration: 2 }}
-
-}
+  visible: {},
+  hidden: {},
+};
 
 function SignInCard(props) {
   const [isExpanded, setExpanded] = useState(false);
