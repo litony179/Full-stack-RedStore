@@ -1,19 +1,34 @@
-import React from 'react';
-import './ProductGallery.css';
-import Product from '../../Utilities/Product/Product';
-import Data from '../../../data/data';
-import RecentProductsData from '../../../data/recentData';
-import RecommendedProductData from '../../../data/recommendedData';
+import React, { useEffect } from "react";
+import "./ProductGallery.css";
+import Product from "../../Utilities/Product/Product";
+import { useDispatch, useSelector } from "react-redux";
+import LoadingBox from "../../Utilities/LoadingBox/LoadingBox";
+import MessageBox from "../../Utilities/MessageBox/MessageBox";
+import { productsGallery } from "../../../actions/ProductsPage/ProductsActions";
 
-const productGallery = () => {
-    return(
-        <div className="product-gallery-container">
-            {
-                Data.products.map((product) => (
-                    <Product key={product._id} product={product}></Product>
-                ))
-            }
-            {/* {
+function ProductGallery() {
+  const dispatch = useDispatch();
+  const productGallery = useSelector((state) => state.productGallery);
+  const { loader, error, products } = productGallery;
+
+  useEffect(() => {
+    dispatch(productsGallery());
+  }, [dispatch]);
+
+  return (
+    <div className="product-gallery-container">
+      {loader ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox varient="danger">{error}</MessageBox>
+      ) : (
+        <div className="row center">
+          {products.map((product) => (
+            <Product key={product._id} product={product}></Product>
+          ))}
+        </div>
+      )}
+      {/* {
                 RecentProductsData.RecentProducts.map((product) => (
                     <Product key={product._id} product={product}></Product>
                 ))
@@ -23,8 +38,8 @@ const productGallery = () => {
                     <Product key={product._id} product={product}></Product>
                 ))
             } */}
-        </div>
-    );
+    </div>
+  );
 }
 
-export default productGallery
+export default ProductGallery;

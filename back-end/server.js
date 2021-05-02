@@ -1,12 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const recentData = require('./data/data.js');
 
 const dataRoute = require('./routes/dataRoutes');
 const productRoute = require('./routes/productRoutes.js');
 const userRoute = require('./routes/userRoutes');
 
+dotenv.config();
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/redstore', {
     useNewUrlParser: true,
     useUnifiedTopology: true,

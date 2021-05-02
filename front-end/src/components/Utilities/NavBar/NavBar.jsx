@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
   const [openNavToggle, setOpenNavToggle] = useState(false);
-  const cart = useSelector(state => state.cart);
-  const {cartItems} = cart;
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
   return (
     <div className="nav-container">
       <nav>
@@ -39,18 +39,16 @@ function NavBar() {
             <Link to="/account">Account</Link>
           </li>
           <li>
-            <Link className="btn signup-btn" to="/signup">
-              Sign Up
+            <Link className="btn signup-btn" to="/signin">
+              Sign In
             </Link>
           </li>
           <li>
             <Link className="shopping-cart" to="/cart">
               <i className="fas fa-shopping-cart"></i>
-              {
-                cartItems.length > 0 && (
-                  <span className="badge">{cartItems.length}</span>
-                )
-              }
+              {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+              )}
             </Link>
           </li>
         </ul>

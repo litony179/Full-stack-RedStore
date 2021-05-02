@@ -1,0 +1,62 @@
+.sign-in-card-container {
+    width: 22rem;
+    min-height: 45rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 19px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(15, 15, 15, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.top-container {
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 1.8rem;
+    padding-bottom: 5rem;
+}
+
+.back-drop {
+    width: 160%;
+    height: 35rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    transform: rotate(60deg);
+    top: -17.2rem;
+    right: -3.2rem;
+    background: rgb(254, 142, 127);
+    background: radial-gradient(circle, rgba(254, 142, 127, 1) 0%, rgba(255, 82, 59, 1) 100%);
+}
+
+.header-container {
+    font: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #fff;
+    z-index: 100;
+    margin: 0;
+}
+
+.small-text {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+    z-index: 10;
+    margin-top: 1.2rem;
+}
+
+.inner-container {
+    padding: 0 1.8rem;
+}
