@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 3rem;
 }
 
 .form-container {
@@ -17,7 +17,7 @@
     color: rgba(200, 200, 200, 0.8);
     font-weight: 500;
     text-decoration: none;
-    margin-top: 1rem;
+    margin-top: 0rem;
     text-align: center;
 }
 
@@ -60,5 +60,7 @@
 .submit-button {
     border: none;
     cursor: pointer;
-    padding: 0.8rem 0
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }

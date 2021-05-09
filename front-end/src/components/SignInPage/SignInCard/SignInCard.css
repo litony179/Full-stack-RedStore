@@ -1,6 +1,6 @@
 .sign-in-card-container {
     width: 22rem;
-    min-height: 45rem;
+    min-height: 37rem;
     display: flex;
     flex-direction: column;
     border-radius: 19px;
@@ -59,4 +59,8 @@
 
 .inner-container {
     padding: 0 1.8rem;
+}
+
+.header-container p {
+    z-index: 10;
 }
