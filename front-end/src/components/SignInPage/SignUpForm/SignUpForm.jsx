@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
-import "./LogInForm.css";
+import { SignInCardContext } from "../SignInCard/SignInCardContext";
+import "./SignUpForm.css";
 
 function SignUpForm(props) {
+  const { switchToSignIn } = useContext(SignInCardContext);
   return (
     <div className="box-container">
       <form className="form-container">
@@ -23,16 +25,14 @@ function SignUpForm(props) {
           placeholder="confirm password"
         ></input>
 
-        <Link className="muted-link" to="#">
-          Forgot your password?
-        </Link>
+        
         <button className="submit-button btn" type="submit">
           Sign In
         </button>
         <h5 className="muted-link">
-          Don't have an account?
-          <Link to="#" className="bold-link">
-            Sign up
+          Already have an account?
+          <Link to="#" onClick={switchToSignIn} className="bold-link">
+            Sign in
           </Link>
         </h5>
       </form>

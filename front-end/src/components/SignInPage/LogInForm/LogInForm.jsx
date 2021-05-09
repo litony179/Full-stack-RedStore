@@ -1,16 +1,30 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
+import { SignInCardContext } from "../SignInCard/SignInCardContext";
 import "./LogInForm.css";
 
+
+
 function LogInForm(props) {
+  const { switchToSignUp } = useContext(SignInCardContext);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    //TODO: Sign In action
+  }
+
   return (
     <div className="box-container">
-      <form className="form-container">
-        <input className="form-input" type="email" placeholder="email"></input>
+      <form onSubmit={submitHandler} className="form-container">
+        <input className="form-input" type="email" placeholder="Enter email" required onChange={ e => setEmail(e.target.value)}></input>
         <input
           className="form-input"
           type="password"
-          placeholder="password"
+          placeholder="Enter password"
+          required
+          onChange={e => setPassword(e.target.value)}
         ></input>
         <Link className="muted-link" to="#">
           Forgot your password?
@@ -20,7 +34,7 @@ function LogInForm(props) {
         </button>
         <h5 className="muted-link">
           Don't have an account?
-          <Link to="#" className="bold-link">
+          <Link to="#" onClick={switchToSignUp} className="bold-link">
             Sign up
           </Link>
         </h5>
