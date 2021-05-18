@@ -6,3 +6,7 @@
     justify-content: center;
     background: radial-gradient(#fff, #ffd6d6);
 }
+
+.signin-navbar {
+    margin: 0 4rem;
+}

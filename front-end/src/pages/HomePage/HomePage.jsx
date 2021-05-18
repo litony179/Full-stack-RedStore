@@ -24,7 +24,6 @@ const homePage = (props) => {
             <Testimonials></Testimonials>
             <Brands></Brands>
             <Footer></Footer>
-            
             <BrowserRouter>
             <Route path={`${props.match.path}/HomePage/:id`} component={SingleProductDetails}></Route>
             </BrowserRouter>

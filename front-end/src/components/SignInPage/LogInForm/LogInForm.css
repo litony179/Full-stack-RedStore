@@ -60,5 +60,11 @@
 .submit-button {
     border: none;
     cursor: pointer;
-    padding: 0.8rem 0
+    padding: 0.8rem 0 !important;
+    text-align: center;
+}
+
+.signin-link {
+    color: #fff;
+    font-size: 1rem;
 }
