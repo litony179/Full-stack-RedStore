@@ -7,6 +7,8 @@ function NavBar() {
   const [openNavToggle, setOpenNavToggle] = useState(false);
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const userSignIn = useSelector((state) => state.userSignIn);
+  const { userInfo } = userSignIn;
   return (
     <div className="nav-container">
       <nav>
@@ -39,9 +41,15 @@ function NavBar() {
             <Link to="/account">Account</Link>
           </li>
           <li>
-            <Link className="btn signup-btn" to="/signin">
-              Sign In
-            </Link>
+            {
+              userInfo ? (
+                <Link to="*">{userInfo.name}</Link>
+              ) : (
+                <Link className="btn signup-btn" to="/signin">
+                  Sign In
+                </Link>
+              )
+            }
           </li>
           <li>
             <Link className="shopping-cart" to="/cart">

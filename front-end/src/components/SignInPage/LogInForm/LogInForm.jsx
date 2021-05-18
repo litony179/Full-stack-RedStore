@@ -1,17 +1,22 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import {useDispatch} from "react-redux";
 import { SignInCardContext } from "../SignInCard/SignInCardContext";
 import "./LogInForm.css";
+import { signin } from "../../../actions/SignInCardPage/userActions";
+import NavBar from "../../../components/Utilities/NavBar/NavBar";
 
 function LogInForm(props) {
   const { switchToSignUp } = useContext(SignInCardContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch()
 
   const submitHandler = (e) => {
     // This makes it so that the form does not refresh
     e.preventDefault();
-    //TODO: Sign In action
+    dispatch(signin(email, password));
   };
 
   return (
