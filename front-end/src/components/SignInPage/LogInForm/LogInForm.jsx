@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import { SignInCardContext } from "../SignInCard/SignInCardContext";
 import "./LogInForm.css";
 import { signin } from "../../../actions/SignInCardPage/userActions";
@@ -11,13 +11,19 @@ function LogInForm(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const dispatch = useDispatch()
+  const redirect = "/";
 
+
+  const userSignIn = useSelector((state) => state.userSignIn);
+  const { userInfo } = userSignIn;
+
+  const dispatch = useDispatch()
   const submitHandler = (e) => {
     // This makes it so that the form does not refresh
     e.preventDefault();
     dispatch(signin(email, password));
   };
+
 
   return (
     <div className="box-container">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
+import { signout } from "../../../actions/SignInCardPage/userActions";
 import "./NavBar.css";
 
 function NavBar() {
@@ -9,6 +10,14 @@ function NavBar() {
   const { cartItems } = cart;
   const userSignIn = useSelector((state) => state.userSignIn);
   const { userInfo } = userSignIn;
+
+  const dispatch = useDispatch();
+  
+
+  const signoutHandler = () => {
+    dispatch(signout());
+  }
+  
   return (
     <div className="nav-container">
       <nav>
@@ -43,7 +52,12 @@ function NavBar() {
           <li>
             {
               userInfo ? (
-                <Link to="*">{userInfo.name}</Link>
+                <div className="dropdown">
+                  <Link to="#">{userInfo.name} <i className="fa fa-caret-down"></i>{' '} </Link>
+                  <ul className="dropdown-contents">
+                    <Link onClick={signoutHandler}>Sign Out</Link>
+                  </ul>
+                </div>
               ) : (
                 <Link className="btn signup-btn" to="/signin">
                   Sign In

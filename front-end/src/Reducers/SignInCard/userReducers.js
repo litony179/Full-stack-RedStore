@@ -1,4 +1,4 @@
-import { USER_SIGNIN_FAIL, USER_SIGNIN_REQUEST, USER_SIGNIN_SIGNOUT, USER_SIGNIN_SUCCESS } from "../../constants/SignInCardPage/userConstants";
+import { USER_SIGNIN_FAIL, USER_SIGNIN_REQUEST, USER_SIGNOUT, USER_SIGNIN_SUCCESS } from "../../constants/SignInCardPage/userConstants";
 
 export const userSignInReducer = (state = {}, action) => {
     switch (action.type) {
@@ -8,7 +8,7 @@ export const userSignInReducer = (state = {}, action) => {
             return { loader: false, userInfo: action.payload };
         case USER_SIGNIN_FAIL:
             return { loader: false, error: action.payload };
-        case USER_SIGNIN_SIGNOUT:
+        case USER_SIGNOUT:
             return {};
         default:
             return state;
